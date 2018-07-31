@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+</head>
+
+<body>
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					 aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">jQuery Site</a>
+				</div>
+
+
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3" id="leftnav"></div>
+			<div class="col-md-9">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3 class="panel-title">jQuery Writing Style</h3>
+					</div>
+					<div class="panel-body">
+						<!-- 每頁不同的內容從這裡開始 -->
+						<h1>1write less, do more</h1>
+						<h1>2write less, do more</h1>
+						<h1>3write less, do more</h1>
+						<h1>4write less, do more</h1>
+						<h1>5write less, do more</h1>
+						<!-- 每頁不同的內容到這裡結束 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<h2>jQuery</h2>
+				<p>jQuery的語法設計使得許多操作變得容易，如操作文件（document）、選擇文件物件模型（DOM）元素、建立動畫效果、處理事件、以及開發Ajax程式。jQuery也提供了給開發人員在其上建立外掛模組的能力。這使開發人員可以對底層互動與動畫、高階效果和高階主題化的元件進行抽象化。模組化的方式使jQuery函式庫能夠建立功能強大的動態網頁以及網路應用程式。
+				</p>
+				<p>
+					<a class="btn btn-primary" href="https://zh.wikipedia.org/wiki/JQuery" role="button">詳細資料 &raquo;
+					</a>
+				</p>
+			</div>
+			<div class="col-md-4">
+				<h2>jQueryUI</h2>
+				<p>jQuery UI是一套JavaScript 函式庫，提供抽象化、可自訂主題的GUI控制項與動畫效果。基於jQuery JavaScript函式庫，可用來建構互動式的網際網路應用程式。在2007年9月約翰·雷西格於jquery.com部落格裡的一篇文章裡正式公諸於世[2]。最新的版本需要jQuery
+					2.1.1或更新的版本。
+				</p>
+				<p>
+					<a class="btn btn-primary" href="https://zh.wikipedia.org/wiki/JQuery_UI" role="button">詳細資料 &raquo;
+					</a>
+				</p>
+			</div>
+			<div class="col-md-4">
+				<h2>jQueryMobile</h2>
+				<p>jQuery Mobile is a touch-optimized web framework (also known as a mobile framework), more specifically a JavaScript library,
+					currently being developed by the jQuery project team. The development focuses on creating a framework compatible with
+					a wide variety of smartphones and tablet computers</p>
+				<p>
+					<a class="btn btn-primary" href="https://en.wikipedia.org/wiki/JQuery_Mobile" role="button">詳細資料 &raquo;
+					</a>
+				</p>
+			</div>
+		</div>
+
+		<!-- Site footer -->
+		<footer class="footer">
+			<p>&copy; IIIEDU</p>
+		</footer>
+
+	</div>
+	<!-- /container -->
+
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#leftnav').load('partial/nav.html');
+			//看到selectors重複時... Chaining 鏈式語法
+			// $('h1').css('background-color', 'green')
+			// $('h1').mouseover(over);         //document.getElementById("id").addEventListener(mouseover,'fun')
+			// $('h1').mouseout(out);
+			//看到jQuery的方法重複使用時
+			//$('h1').css('background-color','green')
+			//     .css('text-align','center')
+			//	   .css('padding','10px')
+			//    .mouseover(over)
+			//    .mouseout(out);
+			$('h1').css({ 'background-color': 'green', 'text-align': 'center', 'padding': '10px' })
+				.mouseover(over)
+				.mouseout(out);
+			function over() {
+				$(this).css('background-color', 'red')
+			}
+			function out() {
+				$(this).css('background-color', 'green')
+			}
+		})
+
+
+
+
+
+	</script>
+</body>
+
+</html>
